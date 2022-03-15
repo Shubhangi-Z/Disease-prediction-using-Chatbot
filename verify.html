@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/login.css">
+
+
+    <title>Healthcare</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="wrapper">
+                <!-- logo -->
+                <div>
+                    <a href="#" class="brand-logo center">
+                        <center>
+                            <img src="img/logo1.png" class="logo">
+                        </center>
+                    </a>
+                </div>
+                <!-- login register controls -->
+                <div class=" center">
+                    <h3>Verification Of Account</h3>
+                </div>
+                <div>
+                    <p class="center">Click the button to verify email</p>
+                </div>
+                <div class="input-field center">
+                    <button class="btn" id="verify" onclick="send_verification()">Verify Email</button><br><br>
+                    <button class="btn" id="loginbtn" style="display: none; width:26%; margin-left:37%"
+                        onclick="window.location.href='login.html'">Login</button>
+                </div>
+
+            </div>
+        </div>
+
+
+    </header>
+    <!-- Firebase -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".sidenav").sidenav();
+            $('select').formSelect();
+        });
+    </script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js">
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyATMKtg1oyHFR_BTjM9h-9vDkdw2pBhFwo",
+            authDomain: "healthcare-system-c9c58.firebaseapp.com",
+            projectId: "healthcare-system-c9c58",
+            storageBucket: "healthcare-system-c9c58.appspot.com",
+            messagingSenderId: "1071300295038",
+            appId: "1:1071300295038:web:28ff1400bec2f205359b2f",
+            measurementId: "G-P0JY5TFVCS"
+        };
+
+
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+
+        //make auth and firstore references
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+
+        //update firestore setting
+    </script>
+    <script src="js/verify.js"></script>
+
+</body>
+
+</html>

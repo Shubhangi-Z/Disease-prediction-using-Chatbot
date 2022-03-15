@@ -1,0 +1,62 @@
+html,body{
+    overflow: hidden;
+}
+header {
+    height: 100%;
+    background: url(background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 1000px;
+}
+.logo{
+    width: 30%;
+    margin-top: -10%;
+    margin-bottom: 0%;
+    position: relative; 
+}
+.wrapper{
+    width: 50%;
+    padding-top: 10%;
+}
+.controls{
+    background-color: #253B6E;
+    margin: auto;
+    border-radius: 12px;
+    text-align: center;
+    width: 80%;
+    height: 40px;
+}
+.slide-login{
+    width: 50%;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.slide-signup{
+    width: 50%;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.form-inner{
+    padding-top: 30px;
+}
+.btn{
+    background-color: #253B6E;
+    border-radius: 15px;
+}
+.radiobtn {
+    padding: 5px;
+}
+
+@media screen and (max-width:670px) {
+    header {
+        min-height: 700px;
+    }
+    .wrapper{
+        width: 100%;
+        padding-top: 15%;
+    }
+}

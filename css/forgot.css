@@ -1,0 +1,39 @@
+html{
+    overflow: hidden;
+}
+
+header {
+    background: url(background.jpg);
+    /* background-blend-mode: darken; */
+    background-size: cover;
+    background-position: center;
+    min-height: 750px;
+    /* opacity: 0.5; */
+}
+.logo{
+    width: 30%;
+    margin-top: -10%;
+    margin-bottom: 0%;
+    position: relative; 
+}
+.wogo{
+    width: 50%;
+    padding-top: 10%;
+}
+p{
+    font-size: 18px;
+}
+.btn{
+    background-color: #253B6E;
+    border-radius: 15px;
+}
+@media (max-width:670px) {
+    header {
+        min-height: 700px;
+    }
+    .wogo {
+        font-size: 14px;
+        width: 100%;
+    }
+
+}

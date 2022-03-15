@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Healthcare</title>
+    <style>
+        .next-btn {
+            margin-right: 18%;
+            margin-top: -5%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <!-- sidenav -->
+        <div class="col s12 l2 sideblue">
+            <div class="container sidenav-fixed">
+                <a href="#" class="sidenav-trigger menu" data-target="mobile-menu">
+                    <i class="material-icons">menu</i>
+                </a>
+                <!-- logo -->
+                <div class="hide-on-med-and-down center">
+                    <a href="#" class="brand-logo center">
+                        <center>
+                            <img src="img/logo.png" class="logo">
+                        </center>
+                    </a>
+                </div>
+                <ul class="hide-on-med-and-down center">
+                    <li><h4 class="white-text">MEDCARE</h4></li>
+                    <li><p class="white-text">Health Solution</p></li>
+                    <li><a href="doctordashboard.html" class="btn black-text list">Dashboard</a></li>
+                    <li><a href="userprofile.html" class="btn black-text list">Account</a></li>
+                    <li><a class="btn black-text list" onclick="logout();">Logout</a></li>
+                </ul>
+
+                <ul class="sidenav" id="mobile-menu">
+                    <li><h4 class="white-text center font">MEDCARE</h4></li>
+                    <li><p class="white-text center font">Health Solution</p></li>
+                    <li><a href="chatbot.html" class="btn black-text list">Find a Doctor</a></li>
+                    <li><a href="userprofile.html" class="btn black-text list">Account</a></li>
+                    <li><a class="btn black-text list" onclick="logout();">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- form -->
+        <div class="col s12 l10 offset-l2">
+            
+            <div class="formcontainer">
+                <h3 class="center font">Personal Information</h3>
+                <br><br>
+                <div class="input-field next_btn right">
+                    <a class="btn white-text btn1" id="edit" type="submit" onclick="edit()">Edit</a>
+                </div>
+                <br><br>
+                <input type="file" id="filetag">
+                <img  src="img/profile.png" id="preview" class="upload-img">
+                <br>
+                <form class="s12 formfill" id="docprofile">
+                    <div class="row">
+                        <div class="input-field col s12 l5">
+                            <input id="first_name" type="text" class="validate">
+                            <label for="first_name">First Name</label>
+                        </div>
+                        <div class="input-field col s12 l5">
+                            <input id="last_name" type="text" class="validate">
+                            <label for="last_name">Last Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 l5">
+                            <input id="phone_no" type="text" class="validate">
+                            <label for="phone_no">Phone No.</label>
+                        </div>
+                        <div class="input-field col s12 l5 ">
+                            <input id="gender" type="text" class="validate">
+                            <label for="gender">Gender</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 l5">
+                            <select multiple id="services" class="validate">
+                                <option value="" disabled>Services</option>
+                                <option value="Allergies/ Immunologist">Allergies/ Immunologist</option>
+                                <option value="Cardiologist">Cardiologist</option>
+                                <option value="Dermatologist">Dermatologist</option>
+                                <option value="Endocrinologist">Endocrinologist</option>
+                                <option value="Family Physician">Family Physician</option>
+                                <option value="gastroenterologist">gastroenterologist</option>
+                                <option value="Gynecologist">Gynecologist</option>
+                                <option value="Infectious Disease Specialist">Infectious Disease Specialist</option>
+                                <option value="Neurologist">Neurologist</option>
+                                <option value="Oncologist">Oncologist</option>
+                                <option value="Ophthalmologist">Ophthalmologist</option>
+                                <option value="Prediatrician">Prediatrician</option>
+                                <option value="Surgon">Surgon</option>
+
+                            </select>
+                            <label for="services">Services</label>
+                        </div>
+                        <div class="input-field col s12 l5 ">
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 l5">
+                            <input id="registeration_id" type="text" class="validate">
+                            <label for="registeration_id">Registeration Id</label>
+                        </div>
+                        <div class="input-field col s12 l5 ">
+                            <input id="date" type="date" class="validate">
+                            <label for="date">Date of Birth</label>
+                        </div>
+                    </div>
+
+                    <div class="save_btn center offset-l1">
+                        <a class="btn white-text btn1 " id="save" type="submit" onclick="docProfile()">Save</a>
+                    </div>
+                    <div class="next_btn right">
+                        <a class="btn white-text btn1" id="next" href="doctoreducation.html">Next</a>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".sidenav").sidenav();
+        });
+        
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js">
+    </script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyATMKtg1oyHFR_BTjM9h-9vDkdw2pBhFwo",
+            authDomain: "healthcare-system-c9c58.firebaseapp.com",
+            projectId: "healthcare-system-c9c58",
+            storageBucket: "healthcare-system-c9c58.appspot.com",
+            messagingSenderId: "1071300295038",
+            appId: "1:1071300295038:web:28ff1400bec2f205359b2f",
+            measurementId: "G-P0JY5TFVCS"
+        };
+
+
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+
+        //make auth and firstore references
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+
+        //update firestore setting
+    </script>
+    <script src="js/app.js"></script>
+    <script src="js/logout.js"></script>
+</body>
+
+</html>

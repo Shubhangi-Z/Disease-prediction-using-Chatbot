@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+html,body{
+    background-color: rgb(248, 255, 255);
+}
+.sideblue{
+    background-color: #0F3057; 
+    height: 100vh;
+}
+.font{
+    font-family: 'Rubik', sans-serif;
+}
+.btn{
+    background-color: #D2ECF9;
+    border-radius: 30px;
+    align-items: center;
+    width: 100%; 
+}
+.call_btn{
+    width: 30%;
+    background-color: #0F3057;
+}
+.list{
+    margin-bottom: 30%;
+}
+.save_btn{
+    width: 15%;
+
+}
+.next_btn{
+    margin-right: 15%;
+}
+.logo{
+    width: 80%;
+    margin-top: 30%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    position: relative;
+}
+.formcontainer{
+    height: 100%;
+    margin-left: 8%;
+    margin-top: 4%;
+}
+.formfill{
+    margin-left: 10%;
+}
+.btn1{
+    background-color: #0F3057;
+    width: 100%;
+    margin-right: 0%;
+}
+.sidenav{
+    background-color: #0F3057;
+}
+.upload{
+    position: relative;
+    top: -47px;
+}    #back {
+    background-color: #0F3057;
+}
+.upload-img{
+    width: 12%;
+    height: 50%;
+    margin-left: -22%;
+    margin-top: -7%;
+    margin-bottom: 3%;
+    border-radius: 50%;
+}
+
+@media screen and (max-width:800px) {
+.back-btn {
+    margin-right: 0%;
+    width: 30%;
+}
+
+}
+@media screen and (max-width:800px) {
+    .btn{
+        border-radius: 18px;
+        width: 90%;
+        margin-bottom: 20%;
+        
+    }
+    .formfill{
+        margin-left: 0%;
+    }
+    
+    .sideblue{
+        background-color: #0F3057; 
+        height: 150%;
+        width: 100vh;
+    }
+    .upload{
+        position: relative;
+        top: -30px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .menu {
+        display: none;
+    }
+    .sideblue{
+        position: fixed;
+    }
+}
